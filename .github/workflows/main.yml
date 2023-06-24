@@ -1,0 +1,32 @@
+name: AI Art Website
+
+on:
+
+  push:
+
+    branches:
+
+      - main
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Checkout repository
+
+      uses: actions/checkout@v2
+
+    - name: Build and Deploy
+
+      uses: JamesIves/github-pages-deploy-action@3.7.1
+
+      with:
+
+        branch: gh-pages
+
+        folder: ./
+
